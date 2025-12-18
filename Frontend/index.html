@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartServe Solutions</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-mono">
+    <!-- header and hero section -->
+    <div class="bg-gray-900">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="font-mono font-bold text-white text-2xl">SmartServe Solutions</span>
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" command="show-modal" commandfor="mobile-menu"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+                        <span class="sr-only">Open main menu</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                            aria-hidden="true" class="size-6">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="index.html" class="text-sm/6 font-semibold text-white cursor-pointer">Home</a>
+                    <a href="services.html" class="text-sm/6 font-semibold text-white cursor-pointer">Services</a>
+                    <a href="about.html" class="text-sm/6 font-semibold text-white cursor-pointer">About</a>
+                    <a href="contactus.html" class="text-sm/6 font-semibold text-white cursor-pointer">Contact Us</a>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <a href="login.html" class="text-sm/6 font-semibold text-white cursor-pointer">Log in <span
+                            aria-hidden="true">&rarr;</span></a>
+                </div>
+            </nav>
+            <el-dialog>
+                <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                    <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                        <el-dialog-panel
+                            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                            <div class="flex items-center justify-between">
+                                <a href="#" class="-m-1.5 p-1.5">
+                                    <span class="sr-only">Your Company</span>
+                                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                                        alt="" class="h-8 w-auto" />
+                                </a>
+                                <button type="button" command="close" commandfor="mobile-menu"
+                                    class="-m-2.5 rounded-md p-2.5 text-gray-200">
+                                    <span class="sr-only">Close menu</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true" class="size-6">
+                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-6 flow-root">
+                                <div class="-my-6 divide-y divide-white/10">
+                                    <div class="space-y-2 py-6">
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Product</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+                                    </div>
+                                    <div class="py-6">
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log
+                                            in</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+        </header>
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div aria-hidden="true"
+                class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                <div style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            " class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
+                </div>
+            </div>
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <!-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                    <div
+                        class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+                        Announcing our next round of funding.
+                        <a href="#" class="font-semibold text-indigo-400"><span aria-hidden="true"
+                                class="absolute inset-0"></span>Read
+                            more <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div> -->
+                <div class="text-center">
+                    <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
+                        Online Service Management System
+                    </h1>
+                    <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+                        Request services, track progress, and pay online with ease.
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="login.html"
+                            class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get
+                            started</a>
+                        <a href="signup.html" class="text-sm/6 font-semibold text-white">Request a Service <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solution section -->
+    <section class="text-gray-400 bg-slate-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+                    Problems in Current Service Management System
+                </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    The existing service management process at SmartServe Solutions
+                    relies heavily on manual operations, resulting in inefficiency,
+                    delays, and poor customer experience.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap -m-4">
+                <!-- Problem 1 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4 ">
+                    <div class="flex relative">
+                        <div class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                MANUAL HANDLING
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Manual Service Requests
+                            </h1>
+                            <p class="leading-relaxed">
+                                Service requests are recorded manually through phone calls or
+                                registers. This process is time-consuming, error-prone, and
+                                difficult to manage as the number of customers increases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/601x361" />
+                        <div class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                NO CENTRAL SYSTEM
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Lack of Service Tracking
+                            </h1>
+                            <p class="leading-relaxed">
+                                There is no centralized platform to monitor service requests,
+                                technician assignments, or current service status, leading to
+                                confusion and operational inefficiency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/603x363" />
+                        <div class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                COMMUNICATION ISSUES
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Delayed Customer Communication
+                            </h1>
+                            <p class="leading-relaxed">
+                                Customers are not informed about service progress in real
+                                time. This lack of communication results in repeated
+                                follow-ups and dissatisfaction among customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 4 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/602x362" />
+                        <div class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                PAYMENT LIMITATION
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                No Online Payment Facility
+                            </h1>
+                            <p class="leading-relaxed">
+                                Payments are handled offline using cash or manual billing.
+                                This leads to delayed payments, poor transaction tracking, and
+                                inconvenience for customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 5 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/605x365" />
+                        <div class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                ADMIN DIFFICULTY
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Inefficient Service Management
+                            </h1>
+                            <p class="leading-relaxed">
+                                Service managers find it difficult to assign technicians,
+                                track workload, and monitor service performance due to the
+                                absence of a digital management system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 6 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/606x366" />
+                        <div class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                CUSTOMER IMPACT
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Poor Customer Experience
+                            </h1>
+                            <p class="leading-relaxed">
+                                Due to delays, lack of transparency, and inefficient service
+                                handling, customer satisfaction is negatively affected,
+                                impacting business growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- solution section -->
+    <section class="text-gray-400 bg-gray-950 body-font">
+    </div>
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+                    SmartServe Solutions – System Features
+                </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    The proposed Online Service Management System provides a centralized,
+                    efficient, and user-friendly solution to overcome the limitations of
+                    traditional service handling methods.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap -m-4">
+
+                <!-- Solution 1 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/600x360">
+                        <div
+                            class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950 opacity-100 flex flex-col justify-center">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                ONLINE REQUESTS
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Digital Service Request System
+                            </h1>
+                            <p class="leading-relaxed">
+                                Customers can submit service requests online through a structured
+                                form, eliminating manual paperwork and reducing errors while
+                                improving request handling efficiency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/601x361">
+                        <div
+                            class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950 opacity-100 flex flex-col justify-center">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                CENTRALIZED PLATFORM
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Centralized Service Tracking
+                            </h1>
+                            <p class="leading-relaxed">
+                                A centralized system allows admins, technicians, and customers
+                                to track service requests, assignments, and current status
+                                in real time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/603x363">
+                        <div
+                            class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950 opacity-100 flex flex-col justify-center">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                COMMUNICATION
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Real-Time Service Updates
+                            </h1>
+                            <p class="leading-relaxed">
+                                Customers receive timely updates regarding service progress,
+                                technician assignment, and completion, ensuring transparency
+                                and improved communication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/602x362">
+                        <div
+                            class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950 opacity-100 flex flex-col justify-center">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                DIGITAL PAYMENTS
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Secure Online Payment System
+                            </h1>
+                            <p class="leading-relaxed">
+                                The system supports online payments, allowing customers to
+                                complete transactions digitally, improving payment speed,
+                                accuracy, and financial transparency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 5 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/605x365">
+                        <div
+                            class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950 opacity-100 flex flex-col justify-center">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                ADMIN CONTROL
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Efficient Service Management
+                            </h1>
+                            <p class="leading-relaxed">
+                                Admins can assign technicians, monitor service workloads,
+                                manage requests efficiently, and ensure smooth service
+                                operations through a centralized dashboard.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 6 -->
+                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="https://dummyimage.com/606x366">
+                        <div
+                            class="px-8 py-10 relative z-10 w-full h-72 border-4 border-gray-800 bg-gray-900 hover:bg-gray-950 opacity-100 flex flex-col justify-center">
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
+                                CUSTOMER EXPERIENCE
+                            </h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">
+                                Improved Customer Satisfaction
+                            </h1>
+                            <p class="leading-relaxed">
+                                With faster response times, transparent service tracking,
+                                and digital payments, the system significantly enhances
+                                overall customer satisfaction and trust.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-gray-400 bg-slate-900 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+
+            <!-- Left Content -->
+            <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+                <h1 class="title-font font-medium text-3xl text-white">
+                    Manage Your Services Online, Anytime, Anywhere
+                </h1>
+                <p class="leading-relaxed mt-4">
+                    Request services, track progress in real time, and make secure payments —
+                    all from a single, easy-to-use platform designed for your convenience.
+                </p>
+            </div>
+
+            <!-- Right Sign-Up Form -->
+            <div
+                class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+                <h2 class="text-white text-lg font-medium title-font mb-5">Get Started</h2>
+
+                <div class="relative mb-4">
+                    <label for="full-name" class="leading-7 text-sm text-gray-400">Full Name</label>
+                    <input type="text" id="full-name" name="full-name"
+                        class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                        placeholder="Enter your full name">
+                </div>
+
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                        placeholder="Enter your email address">
+                </div>
+
+                <button
+                    class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg cursor-pointer">
+                    Sign Up
+                </button>
+
+                <p class="text-xs mt-3">
+                    Start using SmartServe Solutions today and manage your services with ease.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+
+            <!-- Logo / Name -->
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                <span class="ml-3 text-2xl font-mono">SmartServe Solutions</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <p class="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">
+                <a href="index.html" class="mr-4 hover:text-white">Home</a>
+                <a href="services.html" class="mr-4 hover:text-white">Services</a>
+                <a href="about.html" class="mr-4 hover:text-white">About</a>
+                <a href="contactus.html" class="hover:text-white">Contact</a>
+            </p>
+
+            <!-- Contact Info -->
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a href="mailto:info@smartserve.com" class="text-gray-400 hover:text-white mr-4">info@smartserve.com</a>
+                <a href="tel:+911234567890" class="text-gray-400 hover:text-white">+91 12345 67890</a>
+            </span>
+        </div>
+
+        <div class="bg-gray-800">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-400 text-sm text-center sm:text-left">
+                    © 2025 SmartServe Solutions — All Rights Reserved
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a href="#" class="text-gray-400 hover:text-white ml-3">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.3 3.9A12.15 12.15 0 013 4.8a4.28 4.28 0 001.32 5.71 4.24 4.24 0 01-1.94-.54v.05a4.28 4.28 0 003.44 4.2 4.3 4.3 0 01-1.93.07 4.28 4.28 0 003.99 2.97A8.59 8.59 0 012 19.54a12.07 12.07 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.72 8.72 0 0024 4.56a8.59 8.59 0 01-2.54.7z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white ml-3">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.3h-3v-4.5c0-1.07-.93-1.93-2-1.93s-2 .86-2 1.93v4.5h-3v-9h3v1.24c.61-.9 1.72-1.24 2.67-1.24 2.09 0 3.33 1.54 3.33 3.74v5.26z">
+                            </path>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
